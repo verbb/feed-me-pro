@@ -1,0 +1,51 @@
+{
+    "name": "verbb/feed-me-pro",
+    "description": "Import content from XML, RSS, CSV or JSON feeds into Entries, Categories, Craft Commerce Products (and variants), and more.",
+    "type": "craft-plugin",
+    "version": "3.0.0-beta.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "feed me pro"
+    ],
+    "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/feed-me/issues?state=open",
+        "source": "https://github.com/verbb/feed-me",
+        "docs": "https://github.com/verbb/feed-me",
+        "rss": "https://github.com/verbb/feed-me/commits/v2.atom"
+    },
+    "license": "Craft",
+    "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC15"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "verbb\\feedme\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Feed Me Pro",
+        "handle": "feed-me-pro",
+        "description": "Import content from XML, RSS, CSV or JSON feeds into Entries, Categories, Craft Commerce Products (and variants), and more.",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/feed-me-pro/craft-3/CHANGELOG.md",
+        "class": "verbb\\feedme\\FeedMePro"
+    }
+}
