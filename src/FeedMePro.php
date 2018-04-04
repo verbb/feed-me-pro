@@ -1,5 +1,8 @@
 <?php
-namespace verbb\feedme;
+namespace verbb\feedmepro;
+
+use Craft;
+use craft\base\Plugin;
 
 use yii\base\Event;
 

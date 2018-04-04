@@ -35,7 +35,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "verbb\\feedme\\": "src/"
+          "verbb\\feedmepro\\": "src/"
         }
     },
     "extra": {
@@ -46,6 +46,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/verbb/feed-me-pro/craft-3/CHANGELOG.md",
-        "class": "verbb\\feedme\\FeedMePro"
+        "class": "verbb\\feedmepro\\FeedMePro"
     }
 }
