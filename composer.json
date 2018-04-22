@@ -2,7 +2,7 @@
     "name": "verbb/feed-me-pro",
     "description": "Import content from XML, RSS, CSV or JSON feeds into Entries, Categories, Craft Commerce Products (and variants), and more.",
     "type": "craft-plugin",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "keywords": [
         "craft",
         "cms",
@@ -25,7 +25,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC15"
+        "craftcms/cms": "^3.0.0"
     },
     "repositories": [
         {
@@ -43,8 +43,6 @@
         "handle": "feed-me-pro",
         "description": "Import content from XML, RSS, CSV or JSON feeds into Entries, Categories, Craft Commerce Products (and variants), and more.",
         "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/verbb/feed-me-pro/craft-3/CHANGELOG.md",
         "class": "verbb\\feedmepro\\FeedMePro"
     }
