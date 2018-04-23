@@ -14,7 +14,7 @@ class FeedMePro extends Plugin
     // Properties
     // =========================================================================
 
-    public $plugin;
+    public static $plugin;
 
     public $hasCpSettings = false;
 
@@ -27,6 +27,8 @@ class FeedMePro extends Plugin
     public function init()
     {
         parent::init();
+
+        self::$plugin = $this;
 
         // Show the CP Section if the free plugin isn't installed. We prompt users to install both
         if (!Craft::$app->plugins->getPlugin('feed-me')) {
