@@ -14,6 +14,8 @@ class FeedMePro extends Plugin
     // Properties
     // =========================================================================
 
+    public $plugin;
+
     public $hasCpSettings = false;
 
     public $hasCpSection = false;
