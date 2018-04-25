@@ -3,6 +3,7 @@ namespace verbb\feedmepro;
 
 use Craft;
 use craft\base\Plugin;
+use craft\db\Query;
 use craft\events\PluginEvent;
 use craft\helpers\UrlHelper;
 use craft\services\Plugins;
@@ -31,7 +32,9 @@ class FeedMePro extends Plugin
         self::$plugin = $this;
 
         // Show the CP Section if the free plugin isn't installed. We prompt users to install both
-        if (!Craft::$app->plugins->getPlugin('feed-me')) {
+        // We can't use the `Craft::$app->plugins->getPlugin()` lookup, because if we install Pro first,
+        // it'll be registered before the Free version, and will always report null...Bah!
+        if (!$this->_pluginExists('feed-me')) {
             $this->hasCpSection = true;
 
             // Plugin Install event
@@ -53,4 +56,18 @@ class FeedMePro extends Plugin
 
         return $navItem;
     }
+
+
+    // Private Methods
+    // =========================================================================
+
+    private function _pluginExists($handle)
+    {
+        return (new Query())
+            ->select(['id'])
+            ->from(['{{%plugins}}'])
+            ->where(['handle' => $handle])
+            ->one();
+    }
+
 }
